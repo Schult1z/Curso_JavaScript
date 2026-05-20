@@ -49,4 +49,4 @@ console.log(null);
 console.log(5 * null); // 0
 console.log(`5` - 3); // 2
 console.log(`5`+ 1); // 51
-console.log9(`dois` * `tres`) // NaN
+console.log9(2 * `tres`) // NaN
