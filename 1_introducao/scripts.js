@@ -65,3 +65,112 @@ console.log(um, dois, tres);
 
 const lastName = `Schultz`; //valor em const nao pode ser alterado
 console.log(lastName);
+
+// Prompt
+let idade = prompt ('Qual a sua idade');
+console.log(`Sua idade é ${idade}`)
+
+// Alert
+alert (`Veja esta mensagem !`);
+
+// Math (Biblioteca / API)
+let maiorNumero = Math.max(1,2,3,4,5);
+console.log(`Este numero e o maior: ${maiorNumero}`);
+
+let menorNumero = Math.min(1,2,3,4,5);
+console.log(`Este e o menor numero : ${menorNumero}`);
+
+let arredondar = Math.round(3.15671);
+console.log(arredondar);
+
+// Estruturas de controle
+let years = 17;
+if(years >= 18) {
+    console.log(`Pode entrar!`);
+} else {
+    console.log(`Voce nao tem a idade apropriada!`);
+}
+
+// else if
+let nome = `Arthur`
+
+if (nome != undefined && nome == `Joaquim`) {
+    console.log(`O nome esta definido !`)
+} else if (nome == `Matheus` && nome.length > 5) { //Length ve quantos caracteres tem a string
+    console.log(`O nome e Matheus`);
+} else {
+    console.log(`Nao e Matheus!`);
+}
+
+// estruturas de repeticao
+let p = 7; 
+while ( p >= 0 ) {
+    console.log(`O p vale ` + p)
+    p = p - 1;
+} 
+
+// do while
+let i = 100;
+do {
+    console.log(i / 2)
+    i = i - 5; // 95 - o console.log nao altera o valor da variavel, so apos ela
+} while (i >= 0 )
+
+// for (iniciacao, condicao, incremento)
+for(let q = 0; q <= 100; q = q + 3)  {
+    console.log(`A soma de q com 2 e: ${q + 2}`);
+}
+
+// Break
+// let nome = ` Gabriel`
+// for (let i = 0; i <= 10; i = i + 1) {
+    
+//     if(i == 3) {
+//         nome = `Joao`
+//     }
+
+//     if(i == 5 && `Joao`){
+//         console.log(`Agora seu nome e Joao`)
+//         break;
+//     }
+//     console.log(i + nome);
+// }
+
+// continue 
+for(let i = 10; i >= 0; i = i -1 ) {
+    if(i % 2 == 0){
+        console.log(`Caiu no continue / numero par`)
+        continue;
+    }
+    console.log(`Numero par: ${i}`);
+}
+
+//  incrementar uma variavel
+let h = 5;
+
+while(h <= 50) {
+    console.log(h);
+    h += 10;
+}
+
+for(let o = 0; o < 10; o++) {
+    console.log(`o i e ` + o);
+}
+
+// Switch / case
+let k = `Amaral`; 
+
+switch(k) {
+    case `Joao`:
+        console.log(`Seu nome e Joao`);
+        break;
+    case `Matheus`:
+        console.log(`Seu nome e matheus`);
+        break;
+    case `Amaral`:
+        console.log(`Seu nome e Amaral`);
+        break;
+    default:
+        console.log(`Nome nao encontrado`);
+        break; 
+}
