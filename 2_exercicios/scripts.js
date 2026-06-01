@@ -424,3 +424,115 @@
     numPar(8);
     numPar(50);
 */
+
+/* 26)
+    let arr = [1,2,3,4,5,6,7,8];
+    console.log(arr[0]);
+    console.log(arr[2]);
+    console.log(arr[3]);
+*/
+
+/* 27)
+    let arr1 = [1,2];
+    let arr2 = [3,4,5,6];
+
+    console.log(arr1.length);
+    console.log(arr2.length);
+*/
+
+/* 28)
+    let onibus = {
+        rodas: 8,
+        limitePassageiro: 40,
+        portas: 2,
+    }
+    console.log(onibus.rodas);
+    console.log(onibus.limitePassageiro);
+    console.log(onibus.portas);
+*/
+
+/* 29)
+        let onibus = {
+        rodas: 8,
+        limitePassageiro: 40,
+        portas: 2,
+    }
+    onibus.janelas = 20;
+    delete onibus.rodas;
+    console.log(onibus.janelas);
+    console.log(onibus.rodas);
+*/
+
+/* 30)
+    let names = ["Gabriel", "Ricardo", "Joao", "Arthur", "Eros"];
+    if(names.includes("Gabriel")) {
+        console.log(`Nome encontrado!`)
+    }
+*/
+
+/* 31)
+    let nums = [1,2,3,4,5,6,7];
+    let nums2 = [1,2,3,4];
+    
+    function verificarArray(arr) {
+        if(arr.length >= 5) {
+            console.log("Muitos elementos!");
+        } else {
+            console.log("Poucos elementos");
+            }
+    }
+    verificarArray(nums);
+    verificarArray(nums2);
+*/
+
+/* 32)
+    let frutas = [`Maca`, `Banana`,`Mamao`,`Melancia`,`Laranja`];
+
+    for(let i = 0; i < frutas.length; i++) {
+        console.log(frutas[i]);
+    }
+*/
+
+/* 33)
+    let aluno = {
+        "nome": "Gabriel",
+        "idade": 20, 
+        "sobreNome": "Schultz",
+    }
+
+    console.log(aluno.nome);
+    console.log(aluno.idade);
+    console.log(aluno.sobreNome);
+*/
+
+/* 34)
+    const frase = "Ser programador requer muita pratica";
+
+    const arrFrase = frase.split(" ");
+
+    for(let i = 0; i < arrFrase.length; i++) {
+        console.log(arrFrase[i]);
+    }
+*/
+
+/* 35)
+    const calculadora = {
+    somar(a,b){
+        return a + b;
+    },
+    subtrair(a,b) {
+        return a - b;
+    },
+    dividir(a,b) {
+        return a / b;
+    },
+    multiplicar(a,b) {
+        return a * b;
+    },
+    }
+
+    console.log(calculadora.somar(10,30))
+    console.log(calculadora.subtrair(10,30))
+    console.log(calculadora.dividir(10,30))
+    console.log(calculadora.multiplicar(10,30))
+*/
