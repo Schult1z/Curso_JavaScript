@@ -536,3 +536,203 @@
     console.log(calculadora.dividir(10,30))
     console.log(calculadora.multiplicar(10,30))
 */
+
+/* 36)
+    class Conta {
+        constructor(saldo) {
+            this.saldo = saldo;
+        }
+        deposito(valor) {
+            this.saldo += valor; 
+        }
+        saque(valor) {
+            this.saldo -= valor;
+        }
+    }
+
+    let conta = new Conta(1000);
+    conta.deposito(1000);
+    console.log(conta.saldo);
+    conta.saque(500);
+    console.log(conta.saldo);
+*/
+
+/* 37)
+    class Carrinho {
+        constructor(itens, qtd, valorTotal){
+            this.itens = itens;
+            this.qtd = qtd;
+            this.valorTotal = valorTotal;
+        }
+        addItem(item) {
+
+            let contador = 0;
+            for(let itemCarrinho in this.itens) {
+                if(this.itens[itemCarrinho].id == item.id) {
+                 this.itens[itemCarrinho].qtd += item.qtd;
+                 contador = 1;
+                }
+            }
+
+            if(contador == 0) {
+                this.itens.push(item);
+            }
+            this.qtd += item.qtd;
+            this.valorTotal += item.preco * item.qtd;
+        }
+        
+        removeItem(item) {
+            for(let itemCarrinho in this.itens) {
+                if(this.itens[itemCarrinho].id == item.id) {
+                    let obj = this.itens[itemCarrinho];
+                    let index = this.index.findIndex(function(obj) {return obj.id == item.id});
+
+                    this.qtd -= this.itens[itemCarrinho] .qtd;
+                    this.valorTotal -= this.itens[itemCarrinho].preco * this.itens[itemCarrinho].qtd;
+
+                    this.itens.splice(index, 1);
+                }
+            }
+        }
+    }
+    let carrinho = new Carrinho ([
+    {
+        id: 01,
+        nome: `Camisa`,
+        qtd: 1,
+        preco: 20,
+    },
+    {
+        id: 02,
+        nome: `Calca`,
+        qtd: 2,
+        preco: 50,
+    }
+    ],3, 120);
+
+    console.log(carrinho);
+    carrinho.addItem ({id:01, nome:`Camisa`, qtd: 2, preco: 20});
+
+    console.log(carrinho);
+
+    carrinho.addItem ({id:03, nome `Bone`, qtd: 1, preco: 15});
+    console.log(carrinho);
+*/
+
+/* 38)
+    class Endereco {
+        constructor(rua, bairro, cidade, estado) {
+            this.rua = rua;
+            this.bairro = bairro;
+            this.cidade = cidade;
+            this.estado = estado;
+        }
+        set novaRua(novaRua) {
+            this.rua = novaRua;
+        }
+
+        set novoBauirro(novoBairro) {
+            this.bairro = novoBairro;
+        }
+        
+        set novaCidade(novaCidade) {
+            this.cidade = novaCidade;
+        }
+
+        set novoEstado(novoEstado) {
+            this.estado = novoEstado;
+        }
+    }
+
+    let endereco = new Endereco(`Rua peru`, `Bacacheri`, `Curitiba`, `PR`);
+    console.log(endereco);
+
+    endereco.novaRua = `Rua peru 213`;
+    console.log(endereco.rua);
+*/
+
+/* 39)
+    class Carro {
+        constructor(marca, cor, gasolinaRestante, consumo) {
+            this.marca = marca;
+            this.cor = cor;
+            this.gasolinaRestante = gasolinaRestante;
+            this.consumo = consumo;
+        }
+
+        dirigir(km) {
+            let litrosConsumidos = km / this.consumo;
+            this. gasolinaRestante -= litrosConsumidos;
+        }
+
+        abastecer(l) {
+            this.gasolinaRestante = this.gasolinaRestante + l;
+        }
+    }
+
+    let porshe = new Carro (`Porshe`, `Roxo Metalico`, 200, 19);
+    console.log(porshe);
+
+    porshe.dirigir(112);
+    console.log(porshe);
+
+    porshe.abastecer(10);
+    porshe.gasolinaRestente;
+*/
+
+/* 40)
+    class Conta {
+        constructor(saldoCC, saldoCP, juros) {
+            this.saldoCC = saldoCC;
+            this.saldoCP = saldoCP;
+            this.juros = juros;
+        }
+
+        deposito(valor) {
+            this.saldoCC += valor;
+        }
+
+        saque(valor) {
+            this.saldoCC -= valor;
+        }
+
+        transferenciaCP(valor) {
+            this.saldoCC -= valor;
+            this.saldoCP += valor;
+        }
+
+        transferenciaCC(valor) {
+            this.saldoCP -= valor;
+            this.saldoCC += valor;
+        }
+
+        jurosAniversario() {
+            let juros = (this.saldoCP * this.juros) / 100;
+            this.saldoCP += juros;
+        }
+    }
+
+    class ContaEspecial extends Conta {
+        constructor (saldoCC, saldoCP, juros){
+            super(saldoCC, saldoCP, juros*2)
+        }
+    }
+
+    let contaNova = new Conta (1000, 5000, 1);
+    console.log(contaNova);
+    contaNova.saque(500);
+    console.log(contaNova);
+    contaNova.deposito(5000);
+    console.log(contaNova);
+
+    contaNova.transferenciaCP(3000);
+    console.log(contaNova);
+
+    contaNova.jurosAniversario();
+    console.log(contaNova);
+    
+    let conta2 = new ContaEspecial(10000, 50000, 1);
+    console.log(conta2);
+    
+    conta2.saque(5000);
+*/
